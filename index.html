@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactuar con HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal@4/minimal.css" rel="stylesheet">
+  <link rel="stylesheet" href=".//public/estilos.css">
+</head>
+
+<body>
+    <header>
+        <h1>Street Hockey</h1>
+        <button id="cesta-carrito"><i class="fas fa-shopping-cart"><span id="contador-carrito">0</span></i></button>
+      </header>
+    <main id="contedor-productos"></main>
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+          <h3>Carrito</h3>
+          <button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
+          <div id="carrito-contenedor">
+          </div>
+          <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        </div>
+      </div>
+  <script src="./src/stock.js" type="module"></script>
+  <script src="./src/modal.js" type="module"></script>
+  <script src="./src/accionesCarrito.js" type="module"></script>
+  <script src="./src/actualizarCarrito.js" type="module"></script>
+  <script src="./src/storage.js" type="module"></script>
+  <script src="/app.js" type="module"></script>
+  <script src="/index.js" type="module"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+</body>
+</html>
