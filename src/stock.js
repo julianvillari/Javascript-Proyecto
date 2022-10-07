@@ -6,7 +6,7 @@ const productos = [
       precio: 85000,
       desc: "Palo de hockey Vlack",
       img: "public/images/wollypremium.jpg",
-      cant: 1
+      cantidad: 1
     },
     {
       id: 2,
@@ -14,7 +14,7 @@ const productos = [
       precio: 80000,
       desc: "Palo de hockey Vlack",
       img: "public/images/emulipro.jpg",
-      cant: 1
+      cantidad: 1
     },
     {
       id: 3,
@@ -22,7 +22,7 @@ const productos = [
       precio: 75000,
       desc: "Palo de hockey Vlack",
       img: "public/images/emulibow.jpg",
-      cant: 1
+      cantidad: 1
     },
     {
       id: 4,
@@ -30,7 +30,7 @@ const productos = [
       precio: 70000,
       desc: "Palo de hockey Vlack",
       img: "public/images/nileclassic.jpg",
-      cant: 1
+      cantidad: 1
     },
     {
       id: 5,
@@ -38,7 +38,7 @@ const productos = [
       precio: 90000,
       desc: "Palo de hockey Vlack",
       img: "public/images/wit100.jpg",
-      cant: 1
+      cantidad: 1
   },
   {
       id: 6,
@@ -46,7 +46,7 @@ const productos = [
       precio: 95000,
       desc: "Palo de hockey Vlack",
       img: "public/images/wit3d100.jpg",
-      cant: 1
+      cantidad: 1
   }
 ];
 export { productos };
