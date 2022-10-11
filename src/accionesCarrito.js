@@ -12,14 +12,22 @@ const validarProductoRepetido = (productoId) => {
 
     const productoRepetido = carrito.find(producto => producto.id === productoId);
 
-    if (productoRepetido) {
-        productoRepetido.cantidad++;
-        const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`);
+    //Agregue operardor ternario
+
+    productoRepetido ?  productoRepetido.cantidad++ : agregarAlCarrito(productoId);
+    const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`);
         cantidadProducto.innerText = `cantidad: ${productoRepetido.cantidad}`;
         actualizarTotalesCarrito(carrito);
-    } else {
-        agregarAlCarrito(productoId);
-    }
+
+
+    // if (productoRepetido) {
+    //     productoRepetido.cantidad++;
+    //     const cantidadProducto = document.getElementById(`cantidad${productoRepetido.id}`);
+    //     cantidadProducto.innerText = `cantidad: ${productoRepetido.cantidad}`;
+    //     actualizarTotalesCarrito(carrito);
+    // } else {
+    //     agregarAlCarrito(productoId);
+    // }
 };
 
 const agregarAlCarrito = (productoId) => {
