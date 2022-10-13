@@ -20,7 +20,29 @@ modalContenedor.addEventListener('click', () => {
 modalCarrito.addEventListener('click', (e) => {
     e.stopPropagation();
 
+
+    // AGREGUE SWEET ALERT EN EL MODAL
+
     if (e.target.classList.contains('boton-eliminar')) {
-        eliminarProductoCarrito(e.target.value)
+        Swal.fire({
+            title: 'Desea eliminar el prodcuto?',
+            text: 'El producto será eliminado del carrito!',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                eliminarProductoCarrito(e.target.value)
+                Swal.fire(
+                    'Eliminado!',
+                    'El producto ha sido eliminado correctamente.',
+                    'success'
+                )
+            }
+        })
+
     };
 });
