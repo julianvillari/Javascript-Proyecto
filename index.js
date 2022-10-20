@@ -6,7 +6,7 @@ import { obtenerCarritoStorage } from "./src/storage.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos(productos);
+    mostrarProductos();
 
     if (localStorage.getItem('carrito')) {
         const carrito = obtenerCarritoStorage();
