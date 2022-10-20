@@ -1,7 +1,7 @@
 import { mostrarProductos } from "./app.js";
 import { pintarCarrito } from "./src/accionesCarrito.js";
 import { actualizarTotalesCarrito } from "./src/actualizarCarrito.js";
-import { productos } from './src/stock.js';
+// import { productos } from './src/stock.js';
 import { obtenerCarritoStorage } from "./src/storage.js";
 
 
