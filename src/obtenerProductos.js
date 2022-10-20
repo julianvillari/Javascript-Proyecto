@@ -6,7 +6,7 @@ const obtenerProductos = async () => {
         return data;
 
     } catch (error) {
-        
+
     };
 };
 
