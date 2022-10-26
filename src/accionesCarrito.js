@@ -44,13 +44,6 @@ const agregarAlCarrito = (productoId) => {
                     `;
     contenedor.appendChild(div);
     actualizarTotalesCarrito(carrito);
-    Toastify({
-        text: "Se agrego un producto al carrito",
-        offset: {
-            x: 50,
-            y: 50
-        },
-    }).showToast();
 };
 
 const pintarCarrito = (carrito) => {
@@ -70,6 +63,17 @@ const pintarCarrito = (carrito) => {
     });
 };
 
+// VACIAR 
+// const vaciar = (carrito) => {
+
+//     while (carrito.length > 0) {
+//         carrito.pop()
+//     }
+
+//     actualizarTotalesCarrito(carrito)
+//     pintarCarrito(carrito)
+// }
+
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
@@ -78,4 +82,4 @@ const eliminarProductoCarrito = (productoId) => {
     pintarCarrito(carritoActualizado);
 };
 
-export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };
+export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito};
