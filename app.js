@@ -9,9 +9,7 @@ const mostrarProductos = async () => {
 
 productos.forEach(producto => {
     const div = document.createElement('div')
-
     div.classList.add('card')
-
     div.innerHTML += `<div class="card" style="width: 18rem;">
     <img class="card-img-top" src="${producto.img}" alt="Card image cap">
     <div class="card-body">

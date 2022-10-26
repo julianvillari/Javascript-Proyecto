@@ -2,6 +2,8 @@ import { actualizarTotalesCarrito } from './actualizarCarrito.js';
 import { productos } from './stock.js';
 import { obtenerCarritoStorage } from './storage.js';
 
+
+
 let carrito = [];
 
 const validarProductoRepetido = (productoId) => {
@@ -63,16 +65,6 @@ const pintarCarrito = (carrito) => {
     });
 };
 
-// VACIAR 
-// const vaciar = (carrito) => {
-
-//     while (carrito.length > 0) {
-//         carrito.pop()
-//     }
-
-//     actualizarTotalesCarrito(carrito)
-//     pintarCarrito(carrito)
-// }
 
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
