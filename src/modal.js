@@ -20,6 +20,9 @@ modalContenedor.addEventListener('click', () => {
 modalCarrito.addEventListener('click', (e) => {
     e.stopPropagation();
 
+    // vaciarCarrito.addEventListener('click', () => {
+    //     const carrito = getCarritoStorage()
+
 
     // AGREGUE SWEET ALERT EN EL MODAL
 
@@ -48,18 +51,18 @@ modalCarrito.addEventListener('click', (e) => {
 });
 // Prueba de eliminar compra
 
-const total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
+// const total = carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0);
 
-const compraTotal = document.createElement("div");
-compraTotal.classname = "contenido-total";
-compraTotal.innerHTML = `Total a pagar: ${total}$`;
+// const compraTotal = document.createElement("div");
+// compraTotal.classname = "contenido-total";
+// compraTotal.innerHTML = `Total a pagar: ${total}$`;
 
-if (cantidadProducto > 0){
-    const comprar = document.createElement("button");
-    comprar.className = "comprarProducto";
-    comprar.innerHTML = "Comprar"
-}
-modalContenedor.appendChild(compraTotal);
-localStorage.setItem('carrito', JSON.stringify(carrito));
+// if (cantidadProducto > 0){
+//     const comprar = document.createElement("button");
+//     comprar.className = "comprarProducto";
+//     comprar.innerHTML = "Comprar"
+// }
+// modalContenedor.appendChild(compraTotal);
+// localStorage.setItem('carrito', JSON.stringify(carrito));
 
-verCarrito.addEventListener('click', pintarCarrito);
+// verCarrito.addEventListener('click', pintarCarrito);

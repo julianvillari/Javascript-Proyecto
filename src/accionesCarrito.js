@@ -44,6 +44,13 @@ const agregarAlCarrito = (productoId) => {
                     `;
     contenedor.appendChild(div);
     actualizarTotalesCarrito(carrito);
+    Toastify({
+        text: "Se agrego un producto al carrito",
+        offset: {
+            x: 50,
+            y: 50
+        },
+    }).showToast();
 };
 
 const pintarCarrito = (carrito) => {
