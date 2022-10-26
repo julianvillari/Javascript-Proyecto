@@ -8,9 +8,10 @@ let carrito = [];
 
 const validarProductoRepetido = (productoId) => {
 
-    if (localStorage.getItem('carrito')) {
-        carrito = obtenerCarritoStorage();
-    }
+    localStorage.getItem('carrito') ? carrito = obtenerCarritoStorage() : console.log('carrito storage not found')
+    // if (localStorage.getItem('carrito')) {
+    //     carrito = obtenerCarritoStorage();
+    // }
 
     const productoRepetido = carrito.find(producto => producto.id === productoId);
 
@@ -45,13 +46,14 @@ const agregarAlCarrito = (productoId) => {
                     <button id=eliminar${producto.id} value='${producto.id}' class='btn waves-effect waves-ligth boton-eliminar'>X</button>
                     `;
     contenedor.appendChild(div);
-    actualizarTotalesCarrito(carrito);
-};
+    actualizarTotalesCarrito(carrito)
+
+}
 
 const pintarCarrito = (carrito) => {
     const contenedor = document.getElementById('carrito-contenedor');
 
-    contenedor.innerHTML = '';
+    contenedor.innerHTML = ""
 
     carrito.forEach(producto => {
         const div = document.createElement('div');
@@ -63,15 +65,23 @@ const pintarCarrito = (carrito) => {
                         `;
         contenedor.appendChild(div);
     });
-};
+}
+const vaciar = (carrito) => {
 
+    while (carrito.length > 0) {
+        carrito.pop()
+    }
+
+    actualizarTotalesCarrito(carrito)
+    pintarCarrito(carrito)
+}
 
 const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
 
-    actualizarTotalesCarrito(carritoActualizado);
-    pintarCarrito(carritoActualizado);
+    // actualizarTotalesCarrito(carritoActualizado);
+    // pintarCarrito(carritoActualizado);
 };
 
-export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito};
+export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito,vaciar};
