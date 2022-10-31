@@ -31,7 +31,6 @@ vaciarCarrito.addEventListener('click', () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(
-                    'Productos eliminados!',
                     'Se han eliminado todos los productos de tu carrito',
                     'success'
                 )
