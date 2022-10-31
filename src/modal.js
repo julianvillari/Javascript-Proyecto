@@ -16,7 +16,7 @@ cerrarCarrito.addEventListener('click', () => {
 });
 
 vaciarCarrito.addEventListener('click', () => {
-    const carrito = obtenerCarritoStorage()
+    const carrito = obtenerCarritoStorage('modal-active')
 
     const alertFire1 = () => {
         Swal.fire({
@@ -41,7 +41,7 @@ vaciarCarrito.addEventListener('click', () => {
     }
     const alertFire2 = () => {
         Swal.fire({
-            title: 'No hay productos en tu carrito',
+            title: 'No hay productos en el carrito',
             text: "",
             icon: 'warning',
             confirmButtonColor: '#3085d6',
