@@ -57,9 +57,8 @@ modalCarrito.addEventListener('click', (e) => {
     if (e.target.classList.contains('eliminar')) {
         eliminarProductoCarrito(e.target.value)
     }
-})// modalContenedor.addEventListener('click', () => {
-//     cerrarCarrito.click()
-// });
+})
+
 
 modalCarrito.addEventListener('click', (e) => {
     e.stopPropagation();
