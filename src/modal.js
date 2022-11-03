@@ -16,7 +16,7 @@ cerrarCarrito.addEventListener('click', () => {
 });
 
 vaciarCarrito.addEventListener('click', () => {
-    const carrito = obtenerCarritoStorage('modal-active')
+    const carrito = obtenerCarritoStorage()
 
     const alertFire1 = () => {
         Swal.fire({
