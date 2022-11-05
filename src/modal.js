@@ -32,7 +32,6 @@ vaciarCarrito.addEventListener('click', () => {
             if (result.isConfirmed) {
                 Swal.fire(
                     'Se han eliminado todos los productos de tu carrito',
-                    'success'
                 )
                 vaciar(carrito)
             }
@@ -54,7 +53,7 @@ vaciarCarrito.addEventListener('click', () => {
 modalCarrito.addEventListener('click', (e) => {
     e.stopPropagation()
 
-    if (e.target.classList.contains('eliminar')) {
+    if (e.target.classList.contains('boton-eliminar')) {
         eliminarProductoCarrito(e.target.value)
     }
 })

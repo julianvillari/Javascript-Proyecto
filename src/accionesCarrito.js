@@ -80,8 +80,8 @@ const eliminarProductoCarrito = (productoId) => {
     const carritoStorage = obtenerCarritoStorage();
     const carritoActualizado = carritoStorage.filter(producto => producto.id != productoId);
 
-    // actualizarTotalesCarrito(carritoActualizado);
-    // pintarCarrito(carritoActualizado);
+    actualizarTotalesCarrito(carritoActualizado);
+    pintarCarrito(carritoActualizado);
 };
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito,vaciar};
